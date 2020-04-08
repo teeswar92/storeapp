@@ -7,7 +7,6 @@ from pyod.models.knn import KNN
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_validate
 outlier_fraction = 0.1 
-#Loadin data from dataset
 data = pd.read_csv("creditcard.csv")
 print(data.shape)
 print(data.head())
