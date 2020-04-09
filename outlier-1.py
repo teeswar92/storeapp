@@ -17,7 +17,7 @@ print(outlierArray)
 
 countOutliers = 0
 countInliers = 0
-for i in range(5000):
+for i in range(15000):
     if outlierArray[i] == -1:
         countOutliers += 1
     else:
@@ -27,7 +27,7 @@ print("Total number of inliers = "+str(countInliers))
 
 FinalData2 = FinalData.copy()
 #remove outliers
-for i in range(5000):
+for i in range(15000):
     if outlierArray[i] == -1:
         FinalData.drop(i, inplace = True)
 
