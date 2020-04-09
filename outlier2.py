@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import LocalOutlierFactor
 
 data = pd.read_csv("creditcard.csv")
-# sampling random 50000 points
+# sampling random 30000 points
 data_50000 = data.sample(n = 30000)
 data_50000.to_csv("NewCreditCard.csv")
 newData = pd.read_csv("NewCreditCard.csv")
@@ -35,9 +35,9 @@ fig = plt.figure(figsize = (16,6))
 
 plt.subplot(1, 2, 1)
 plt.title("Before removing outliers for column V1")
-ax = sns.violinplot(x="Class", y = "V1", data= FinalData2, hue = "Class")
+ax = sns.violinplot(x="Class", y = "V1", data= FinalData3, hue = "Class")
 
 plt.subplot(1, 2, 2)
 plt.title("After removing outliers for column V1")
-ax = sns.violinplot(x="Class", y = "V1", data= FinalData, hue = "Class")        
+ax = sns.violinplot(x="Class", y = "V1", data= FinalData3, hue = "Class")        
 plt.show()
