@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 from sklearn.neighbors import LocalOutlierFactor
 
-data = pd.read_csv("creditcard.csv")
+data = pd.read_csv("creditcard1.csv")
 # sampling random 50000 points
 data_50000 = data.sample(n = 50000)
-data_50000.to_csv("CreditCard.csv")
-newData = pd.read_csv("OldCreditCard.csv")
+data_50000.to_csv("creditCard1.csv")
+newData = pd.read_csv("OldCreditCard2.csv")
 FinalData = newData.drop("Unnamed: 0", axis = 1)
 lof = LocalOutlierFactor(n_neighbors=2, algorithm='auto', metric='minkowski', p=2, metric_params=None, contamination=0.5, n_jobs=1)
 outlierArray = lof.fit_predict(FinalData)
