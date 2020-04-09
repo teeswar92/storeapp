@@ -7,7 +7,7 @@ from sklearn.neighbors import LocalOutlierFactor
 
 data = pd.read_csv("creditcard.csv")
 # sampling random 50000 points
-data_50000 = data.sample(n = 50000)
+data_50000 = data.sample(n = 30000)
 data_50000.to_csv("NewCreditCard.csv")
 newData = pd.read_csv("NewCreditCard.csv")
 FinalData = newData.drop("Unnamed: 0", axis = 1)
@@ -17,7 +17,7 @@ print(outlierArray)
 
 countOutliers = 0
 countInliers = 0
-for i in range(50000):
+for i in range(30000):
     if outlierArray[i] == -1:
         countOutliers += 1
     else:
@@ -27,7 +27,7 @@ print("Total number of inliers = "+str(countInliers))
 
 FinalData2 = FinalData.copy()
 #remove outliers
-for i in range(50000):
+for i in range(30000):
     if outlierArray[i] == -1:
         FinalData.drop(i, inplace = True)
 
