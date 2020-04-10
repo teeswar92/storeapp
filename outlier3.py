@@ -29,8 +29,8 @@ xs = FinalData['V1']
 ys = FinalData['Class']
 
 for x, y in zip(xs, ys):
-    color = 'blue'  # non-outlier color
+    color = 'green'  # non-outlier color
     if not min_threshold <= y <= max_threshold:  # condition for being an outlier
-        color = 'red'  # outlier color
+        color = 'orange'  # outlier color
     plt.scatter(x, y, color=color)
 plt.show()
