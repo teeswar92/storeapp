@@ -1,0 +1,7 @@
+1. git status
+2. git pull origin master
+3. git checkout -b new-branch1
+4. git add another.py
+5. git commit -m 'added my code'
+6. git push origin new-branch[Requires Password]
+7. git merge master
